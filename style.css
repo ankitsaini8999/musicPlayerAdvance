@@ -1,0 +1,241 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+section {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  background: linear-gradient(45deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(img/aBlur.jpg) no-repeat center center/cover;
+  overflow: hidden;
+  font-family: pacifico;
+}
+
+section #albumArt {
+  position: absolute;
+  top: 10%;
+  left: 30%;
+  -webkit-transform: translate(-30%, -10%);
+          transform: translate(-30%, -10%);
+  width: 180px;
+  height: 300px;
+  background: url(img/a.jpg) no-repeat center center/cover;
+  border-radius: 10px;
+  z-index: 2;
+}
+
+section #albumLight {
+  position: absolute;
+  top: 10%;
+  left: 30%;
+  -webkit-transform: translate(-30%, -10%);
+          transform: translate(-30%, -10%);
+  border-radius: 10px;
+  width: 185px;
+  height: 305px;
+  background: black;
+}
+
+section .danceFilter {
+  -webkit-animation: dropDance 0.5s linear infinite;
+          animation: dropDance 0.5s linear infinite;
+}
+
+section #songName {
+  position: absolute;
+  top: 70%;
+  left: 30%;
+  -webkit-transform: translate(-30%, -70%);
+          transform: translate(-30%, -70%);
+  font-size: 45px;
+  text-align: center;
+  color: #d63083;
+  text-shadow: 4px 2px black, 6px 4px #fce305, 8px 6px #fc0505, 10px 8px #05fc6c;
+}
+
+section #controlBox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: absolute;
+  top: 90%;
+  left: 30%;
+  -webkit-transform: translate(-30%, -90%);
+          transform: translate(-30%, -90%);
+  font-size: 50px;
+}
+
+section #controlBox div {
+  margin: 10px 20px;
+  cursor: pointer;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+  -webkit-filter: drop-shadow(4px 2px 1px #39ff08);
+          filter: drop-shadow(4px 2px 1px #39ff08);
+}
+
+section #controlBox div:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  -webkit-filter: drop-shadow(4px 2px 1px red);
+          filter: drop-shadow(4px 2px 1px red);
+}
+
+section #controlBox .danceFilter {
+  -webkit-animation: dropDance 0.5s linear infinite;
+          animation: dropDance 0.5s linear infinite;
+}
+
+section #toggler {
+  width: 60px;
+  height: 40px;
+  position: absolute;
+  right: 5px;
+  top: 5px;
+  z-index: 15;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: pointer;
+  visibility: hidden;
+}
+
+section #toggler span {
+  width: 60%;
+  height: 3px;
+  background: #2bff00;
+}
+
+section #songListContainer {
+  position: absolute;
+  left: 70%;
+  background: linear-gradient(45deg, rgba(0, 0, 0, 0.514), rgba(250, 248, 248, 0.582), rgba(0, 0, 0, 0.486));
+  width: 30%;
+  height: 100%;
+  -webkit-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
+}
+
+section #songListContainer ul {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  list-style: none;
+  width: 100%;
+}
+
+section #songListContainer ul li {
+  font-size: 1.7rem;
+  text-align: center;
+  margin: 2px 0;
+  color: white;
+  text-shadow: 2px 2px black, 3px 3px #0dfc05;
+  border-bottom: 2px solid #b8f32f;
+}
+
+section #songListContainer ul li:hover {
+  color: #99f308;
+  cursor: pointer;
+}
+
+section #songListContainer ul .playing {
+  color: #33e3fa;
+  text-decoration: line-through;
+}
+
+@-webkit-keyframes dropDance {
+  0% {
+    -webkit-filter: drop-shadow(4px 2px 1px red);
+            filter: drop-shadow(4px 2px 1px red);
+  }
+  25% {
+    -webkit-filter: drop-shadow(4px 2px 1px orange);
+            filter: drop-shadow(4px 2px 1px orange);
+  }
+  50% {
+    -webkit-filter: drop-shadow(4px 2px 1px blue);
+            filter: drop-shadow(4px 2px 1px blue);
+  }
+  75% {
+    -webkit-filter: drop-shadow(4px 2px 1px green);
+            filter: drop-shadow(4px 2px 1px green);
+  }
+  100% {
+    -webkit-filter: drop-shadow(4px 2px 1px yellow);
+            filter: drop-shadow(4px 2px 1px yellow);
+  }
+}
+
+@keyframes dropDance {
+  0% {
+    -webkit-filter: drop-shadow(4px 2px 1px red);
+            filter: drop-shadow(4px 2px 1px red);
+  }
+  25% {
+    -webkit-filter: drop-shadow(4px 2px 1px orange);
+            filter: drop-shadow(4px 2px 1px orange);
+  }
+  50% {
+    -webkit-filter: drop-shadow(4px 2px 1px blue);
+            filter: drop-shadow(4px 2px 1px blue);
+  }
+  75% {
+    -webkit-filter: drop-shadow(4px 2px 1px green);
+            filter: drop-shadow(4px 2px 1px green);
+  }
+  100% {
+    -webkit-filter: drop-shadow(4px 2px 1px yellow);
+            filter: drop-shadow(4px 2px 1px yellow);
+  }
+}
+
+@media (max-width: 768px) {
+  section #albumArt {
+    left: 50%;
+    -webkit-transform: translate(-50%, -10%);
+            transform: translate(-50%, -10%);
+  }
+  section #albumLight {
+    left: 50%;
+    -webkit-transform: translate(-50%, -10%);
+            transform: translate(-50%, -10%);
+  }
+  section #songName {
+    left: 50%;
+    -webkit-transform: translate(-50%, -70%);
+            transform: translate(-50%, -70%);
+    font-size: 40px;
+    width: 100%;
+  }
+  section #controlBox {
+    left: 50%;
+    -webkit-transform: translate(-50%, -90%);
+            transform: translate(-50%, -90%);
+  }
+  section #toggler {
+    visibility: visible;
+    z-index: 15;
+  }
+  section #songListContainer {
+    left: 100%;
+    background: linear-gradient(45deg, rgba(0, 0, 0, 0.849), rgba(0, 0, 0, 0.836), rgba(0, 0, 0, 0.486));
+    width: 100%;
+    z-index: 10;
+  }
+}
+/*# sourceMappingURL=style.css.map */
