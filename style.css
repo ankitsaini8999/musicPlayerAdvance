@@ -84,11 +84,6 @@ section #controlBox div:hover {
           filter: drop-shadow(4px 2px 1px red);
 }
 
-section #controlBox .danceFilter {
-  -webkit-animation: dropDance 0.5s linear infinite;
-          animation: dropDance 0.5s linear infinite;
-}
-
 section #toggler {
   width: 60px;
   height: 40px;
@@ -155,7 +150,6 @@ section #songListContainer ul li:hover {
 
 section #songListContainer ul .playing {
   color: #33e3fa;
-  text-decoration: line-through;
 }
 
 @-webkit-keyframes dropDance {

@@ -73,13 +73,16 @@ playBtn.addEventListener("click", () => {
 	if (!song.classList.contains("songActive")) {
 		song.classList.add("songActive");
 		song.play();
-		if (song.src.slice(33, -4) == bgArr[i]) {
-			listItem[i].classList.add("playing");
-		}
 	} else {
 		song.classList.remove("songActive");
 		song.pause();
+	}
+	if (!listItem[i].classList.contains("playing")) {
+		listItem[i].classList.add("playing");
+		song.play();
+	} else {
 		listItem[i].classList.remove("playing");
+		song.pause();
 	}
 });
 
@@ -96,9 +99,13 @@ songList.addEventListener("click", (e) => {
 		if (!listItem[i].classList.contains("playing")) {
 			listItem[i].classList.add("playing");
 			song.play();
+			playBtn.classList.add("danceFilter");
+			albumLight.classList.add("danceFilter");
 		} else {
 			listItem[i].classList.remove("playing");
 			song.pause();
+			playBtn.classList.remove("danceFilter");
+			albumLight.classList.remove("danceFilter");
 		}
 	}
 	e.stopPropagation();
